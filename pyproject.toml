@@ -1,0 +1,12 @@
+[project]
+name = "KeePassXC CSV to PDF"
+version = "0.0.1"
+description = "Store your keepassxc passwords physically!"
+authors = [
+    {name = "Ali Al-Iusefi", email = "alighanem99@live.com"},
+]
+dependencies = []
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+

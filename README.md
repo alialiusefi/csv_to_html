@@ -1,0 +1,1 @@
+Store your KeePassXC passwords physically!
