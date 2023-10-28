@@ -1,2 +1,0 @@
-class CSVReader:
-    filepath: str
