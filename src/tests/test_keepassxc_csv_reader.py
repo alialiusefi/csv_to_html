@@ -1,4 +1,4 @@
-from keepassxc_csv_to_pdf.csv.KeePassXCCSVReader import KeePassXCCSVReader
+from keepassxc_csv_to_pdf.csv.keepassxc_csv_reader import KeePassXCCSVReader
 
 
 def test_init():

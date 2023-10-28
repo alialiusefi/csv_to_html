@@ -8,6 +8,7 @@ authors = [
 dependencies = [
     "black>=23.10.1",
     "pytest>=7.4.3",
+    "pylint>=3.0.2",
 ]
 requires-python = ">=3.11"
 readme = "README.md"
