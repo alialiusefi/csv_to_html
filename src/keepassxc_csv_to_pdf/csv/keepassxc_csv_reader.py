@@ -9,7 +9,8 @@ class KeePassXCCSVReader:
 
     def __init__(self, filepath):
         self.file_path = filepath
-        self.reader = csv.reader(self.file_path)
+        file = open(filepath)
+        self.reader = csv.reader(file)
 
     def read_all(self) -> List[dict]:
         list_of_rows = []
