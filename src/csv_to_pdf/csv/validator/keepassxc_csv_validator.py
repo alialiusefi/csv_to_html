@@ -1,6 +1,6 @@
 from typing import List
 
-from keepassxc_csv_to_pdf.csv.model.parsing_errors import (
+from csv_to_pdf.csv.model.parsing_errors import (
     IncorrectHeaderError,
     ParsingError,
     EmptyValueError,

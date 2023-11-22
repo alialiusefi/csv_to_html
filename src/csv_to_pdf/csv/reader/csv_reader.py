@@ -2,11 +2,11 @@ import csv
 from collections.abc import Iterator
 from typing import List
 
-from keepassxc_csv_to_pdf.csv.model.parsing_errors import ParsingError
-from keepassxc_csv_to_pdf.csv.model.keepassxc_csv_row import KeePassXCCSVRow
+from csv_to_pdf.csv.model.parsing_errors import ParsingError
+from csv_to_pdf.csv.model.keepassxc_csv_row import KeePassXCCSVRow
 
 
-class KeePassXCCSVReader:
+class CSVReader:
     file_path: str
     __reader: Iterator
     __ENCODING = "utf-8"

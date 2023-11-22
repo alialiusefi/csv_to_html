@@ -1,7 +1,7 @@
 [project]
-name = "keepassxc_csv_to_pdf"
+name = "csv_to_pdf"
 version = "0.0.1"
-description = "Store your keepassxc passwords physically!"
+description = "Convert your csvs to pdf seamlessly!"
 authors = [
     {name = "Ali Al-Iusefi", email = "alighanem99@live.com"},
 ]
