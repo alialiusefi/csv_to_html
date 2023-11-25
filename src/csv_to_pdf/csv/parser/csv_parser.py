@@ -26,7 +26,7 @@ class CSVParser:
         for row in self.__reader:
             row_errors, csv_row = self.read_row(row)
             if row_errors:
-                row_errors.append(row_errors)
+                errors.append(row_errors)
             else:
                 list_of_rows.append(csv_row)
         return errors, list_of_rows
