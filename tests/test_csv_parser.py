@@ -14,12 +14,13 @@ def test_init():
 
 
 def test_read_all():
-    file_path = "fixtures/csv/test.csv"
+    file_path = "fixtures/csv/valid_csv.csv"
     header_strings = ["Group", "Title", "Username", "Password", "URL", "Notes", "TOTP", "Icon", "Last Modified",
                       "Created"]
     header_columns = list(map(lambda x: CSVHeaderColumn(x), header_strings))
     header = CSVHeader(header_columns)
     parser = CSVParser(file_path, header)
     errors, csv_rows = parser.read_all()
-    print(csv_rows)
+    print(f"rows={csv_rows}")
+    print(f"errors={errors}")
     assert len(csv_rows) == 2
