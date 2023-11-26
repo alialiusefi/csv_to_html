@@ -17,7 +17,7 @@ class CSVParser:
         self.file_path = filepath
         file = open(filepath, encoding=self.__ENCODING)
         self.__reader = csv.reader(file)
-        self.__csv_header = csv_header
+        self.__csv_header = csv_header  # todo: read header instead of passing
 
     def read_all(self) -> (List[ParsingError], List[CSVRow]):
         list_of_rows = []
