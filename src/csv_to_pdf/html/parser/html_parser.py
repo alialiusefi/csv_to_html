@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-from csv_to_pdf.html.template.template import HtmlTemplate
+from csv_to_pdf.html.model.template import HtmlTemplate
 
 
 class HtmlTemplateParser:
