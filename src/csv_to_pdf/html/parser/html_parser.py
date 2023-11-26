@@ -18,28 +18,25 @@ class HtmlTemplateParser:
             self.__parser = BeautifulSoup(file.read())
             file.close()
         body = self.__parser.body
-        key_value_map = self.__get_key_value(body)
-        return HtmlTemplate(key_value_map)
+        set_of_place_holders = self.__get_placeholder(body)
+        return HtmlTemplate(set_of_place_holders, body)
 
     @staticmethod
-    def __get_key_value(body):
+    def __get_placeholder(body):
         table = body.table
-        key_value_map = dict()
+        set_of_placeholders = set()
         for table_row in table.contents:
             if table_row == "\n":
                 continue
-            key = None
-            value = None
+            placeholder = None
             for cell in table_row.children:
                 if cell == "\n" or len(cell.contents) != 1:
                     continue
-                elif cell.name == "th":
-                    key = cell.contents[0].strip()
                 elif cell.name == "td":
-                    value = cell.contents[0].strip()
+                    placeholder = cell.contents[0].strip()
                 else:
                     continue
-            key_value_map[key] = value
-        return key_value_map
+            set_of_placeholders.add(placeholder)
+        return set_of_placeholders
 
 

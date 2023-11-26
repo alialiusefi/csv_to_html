@@ -3,5 +3,6 @@ from dataclasses import dataclass
 
 @dataclass
 class HtmlTemplate:
-    key_value_map: dict
+    set_of_place_holders: set
+    html_document: str
     pass

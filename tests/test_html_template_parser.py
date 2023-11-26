@@ -12,11 +12,6 @@ def test_read_template():
     file_path = "fixtures/html/template.html"
     parser = HtmlTemplateParser(file_path)
     template = parser.read_template()
-    expected = {
-        "Group": "$GROUP",
-        "Title": "$TITLE",
-        "Username": "$USERNAME",
-        "Password": "$PASSWORD"
-    }
-    print(template.key_value_map)
-    assert template.key_value_map == expected
+    expected = {"$Group", "$Title", "$Username", "$Password"}
+    print(template.set_of_place_holders)
+    assert template.set_of_place_holders == expected
