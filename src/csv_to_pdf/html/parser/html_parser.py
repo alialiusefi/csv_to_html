@@ -28,12 +28,8 @@ class HtmlTemplateParser:
         for table_row in table.contents:
             if table_row == "\n":
                 continue
-            placeholder = None
             for cell in table_row.children:
                 if cell.name == "td" and len(cell.contents) == 1:
                     placeholder = cell.contents[0].strip()
-            if placeholder:
-                set_of_placeholders.add(placeholder)
+                    set_of_placeholders.add(placeholder)
         return set_of_placeholders
-
-
