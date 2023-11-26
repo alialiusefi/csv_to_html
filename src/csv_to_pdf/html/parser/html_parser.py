@@ -30,13 +30,10 @@ class HtmlTemplateParser:
                 continue
             placeholder = None
             for cell in table_row.children:
-                if cell == "\n" or len(cell.contents) != 1:
-                    continue
-                elif cell.name == "td":
+                if cell.name == "td" and len(cell.contents) == 1:
                     placeholder = cell.contents[0].strip()
-                else:
-                    continue
-            set_of_placeholders.add(placeholder)
+            if placeholder:
+                set_of_placeholders.add(placeholder)
         return set_of_placeholders
 
 
