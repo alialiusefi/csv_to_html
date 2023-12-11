@@ -41,5 +41,6 @@ class CSVParser:
             return [], []
         for index in range(header_column_size):
             cell = row[index]
-            row_values.append({column_values[index]: cell})
+            header_value = column_values[index].value
+            row_values.append({header_value: cell})
         return errors, CSVRow(row_values)

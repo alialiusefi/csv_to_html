@@ -10,6 +10,11 @@ class CSVHeaderColumn:
 @dataclass
 class CSVHeader:
     list_of_columns: List[CSVHeaderColumn]
+    pass
+
+    def __init__(self, list_of_columns: List[CSVHeaderColumn]):
+        self.list_of_columns = list_of_columns
+
 
 
 @dataclass
