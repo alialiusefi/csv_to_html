@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-from csv_to_pdf.html.model.template import HtmlTemplate
+from csv_to_pdf.html.model.html_template import HtmlTemplate
 
 
 class HtmlTemplateParser:
@@ -18,11 +18,11 @@ class HtmlTemplateParser:
             self.__parser = BeautifulSoup(file.read())
             file.close()
         body = self.__parser.body
-        set_of_place_holders = self.__get_placeholder(body)
+        set_of_place_holders = self.__get_placeholders(body)
         return HtmlTemplate(set_of_place_holders, body)
 
     @staticmethod
-    def __get_placeholder(body):
+    def __get_placeholders(body):
         table = body.table
         set_of_placeholders = set()
         for table_row in table.contents:
