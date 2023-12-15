@@ -1,4 +1,4 @@
-from csv_to_pdf.html.parser.html_parser import HtmlTemplateParser
+from csv_to_html.html.parser.html_parser import HtmlTemplateParser
 
 
 def test_init():

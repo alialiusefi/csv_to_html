@@ -16,7 +16,6 @@ class CSVHeader:
         self.list_of_columns = list_of_columns
 
 
-
 @dataclass
 class CSVRow:
     list_of_row_values: List[Dict[CSVHeaderColumn, str]]

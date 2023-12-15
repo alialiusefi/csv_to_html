@@ -1,10 +1,10 @@
-import csv
+import csv as pycsv
 from collections.abc import Iterator
 from typing import List
 
-from csv_to_pdf.csv.model.parsing_errors import ParsingError, MissingRowValue
-from csv_to_pdf.csv.model.csv_classes import CSVRow
-from csv_to_pdf.csv.model.csv_classes import CSVHeader
+from csv_to_html.csv.model.parsing_errors import ParsingError
+from csv_to_html.csv.model.csv_classes import CSVRow, CSVHeaderColumn
+from csv_to_html.csv.model.csv_classes import CSVHeader
 
 
 class CSVParser:
@@ -16,8 +16,9 @@ class CSVParser:
     def __init__(self, filepath):
         self.file_path = filepath
         file = open(filepath, encoding=self.__ENCODING)
-        self.__reader = csv.reader(file)
-        self.__csv_header = next(self.__reader)
+        self.__reader = pycsv.reader(file)
+        header_strings = next(self.__reader)
+        self.__csv_header = CSVHeader([CSVHeaderColumn(i) for i in header_strings])
 
     def read_all(self) -> (List[ParsingError], List[CSVRow]):
         list_of_rows = []
