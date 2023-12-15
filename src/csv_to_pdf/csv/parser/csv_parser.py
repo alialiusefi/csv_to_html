@@ -13,16 +13,15 @@ class CSVParser:
     __ENCODING = "utf-8"
     __csv_header: CSVHeader
 
-    def __init__(self, filepath, csv_header):
+    def __init__(self, filepath):
         self.file_path = filepath
         file = open(filepath, encoding=self.__ENCODING)
         self.__reader = csv.reader(file)
-        self.__csv_header = csv_header  # todo: read header instead of passing
+        self.__csv_header = next(self.__reader)
 
     def read_all(self) -> (List[ParsingError], List[CSVRow]):
         list_of_rows = []
         errors = []
-        next(self.__reader)  # skip header
         for row in self.__reader:
             row_errors, csv_row = self.read_row(row)
             if row_errors:
