@@ -1,4 +1,4 @@
-from csv_to_html.html.model.html_template import HtmlTemplate
+from csv_to_html.src.html.model.html_template import HtmlTemplate
 from bs4 import BeautifulSoup
 import re
 

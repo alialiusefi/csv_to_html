@@ -1,4 +1,7 @@
 import os
+import pytest
+
+pytest_plugins = ["pytester"]
 
 
 def test_run_help():

@@ -2,9 +2,9 @@ import csv as pycsv
 from collections.abc import Iterator
 from typing import List
 
-from csv_to_html.csv.model.parsing_errors import ParsingError
-from csv_to_html.csv.model.csv_classes import CSVRow, CSVHeaderColumn
-from csv_to_html.csv.model.csv_classes import CSVHeader
+from csv_to_html.src.csv.model.parsing_errors import ParsingError
+from csv_to_html.src.csv.model.csv_classes import CSVRow, CSVHeaderColumn
+from csv_to_html.src.csv.model.csv_classes import CSVHeader
 
 
 class CSVParser:

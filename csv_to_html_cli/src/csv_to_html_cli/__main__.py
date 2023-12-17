@@ -1,8 +1,8 @@
 import argparse
 
-from csv_to_html.csv.parser.csv_parser import CSVParser
-from csv_to_html.html.interpolator.html_interpolator import HtmlInterpolator
-from csv_to_html.html.parser.html_parser import HtmlTemplateParser
+from csv_to_html.src.csv.parser.csv_parser import CSVParser
+from csv_to_html.src.html.interpolator.html_interpolator import HtmlInterpolator
+from csv_to_html.src.html.parser.html_parser import HtmlTemplateParser
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
