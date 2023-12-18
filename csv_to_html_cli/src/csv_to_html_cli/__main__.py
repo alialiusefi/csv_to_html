@@ -4,18 +4,21 @@ from csv_to_html.src.csv.parser.csv_parser import CSVParser
 from csv_to_html.src.html.interpolator.html_interpolator import HtmlInterpolator
 from csv_to_html.src.html.parser.html_parser import HtmlTemplateParser
 
-if __name__ == '__main__':
+
+def main():
     parser = argparse.ArgumentParser(
         prog='csvtohtml-cli',
         description='Parses CSV to visualize into an HTML page',
         epilog='some epilog'
     )
     parser.add_argument('convert', help='Action to convert the csv to html')
+    # todo: add required flags
     parser.add_argument('--csv_file')
     parser.add_argument('--html_template_file')
     parser.add_argument('--html_output_path')
     args = parser.parse_args()
 
+    # todo: check 'convert'
     if args.csv_file and args.html_template_file and args.html_output_path:
         csv_parser = CSVParser(args.csv_file)
         errors, csv_rows = csv_parser.read_all()
@@ -30,3 +33,7 @@ if __name__ == '__main__':
             html_output_file.write(html)
     else:
         parser.print_help()
+
+
+if __name__ == '__main__':
+    main()
