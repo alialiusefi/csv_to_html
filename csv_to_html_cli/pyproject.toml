@@ -1,0 +1,18 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    { name = "Ali Al-Iusefi", email = "alighanem99@live.com" },
+]
+dependencies = [
+    "csv_to_html @ file:///${PROJECT_ROOT}/../csv_to_html"
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[project.scripts]
+csvtohtml-cli = "csv_to_html_cli.csv_to_html_cli.__main__:main"
+
+[tool.black]
+line-length = 80
