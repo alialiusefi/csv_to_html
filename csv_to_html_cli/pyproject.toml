@@ -1,7 +1,7 @@
 [project]
-name = ""
-version = ""
-description = ""
+name = "csv_to_html_cli"
+version = "0.0.1"
+description = "csv_to_html CLI"
 authors = [
     { name = "Ali Al-Iusefi", email = "alighanem99@live.com" },
 ]
@@ -12,7 +12,7 @@ requires-python = ">=3.11"
 license = {text = "MIT"}
 
 [project.scripts]
-csvtohtml-cli = "csv_to_html_cli.csv_to_html_cli.__main__:main"
+csv_to_html_cli = "csv_to_html_cli.__main__:main"
 
 [tool.black]
 line-length = 80
