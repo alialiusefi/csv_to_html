@@ -1,5 +1,5 @@
-from csv_to_html.src.html.interpolator.html_interpolator import HtmlInterpolator
-from csv_to_html.src.html.model.html_template import HtmlTemplate
+from csv_to_html.src.myhtml.interpolator.html_interpolator import HtmlInterpolator
+from csv_to_html.src.myhtml.model.html_template import HtmlTemplate
 
 
 def test_init():
@@ -14,8 +14,8 @@ def test_set_values():
     template = HtmlTemplate(placeholders, html)
     values = {"placeholder1": "123", "placeholder2": "abc"}
 
-    interpolator.set_values(template, values)
+    new_html = interpolator.set_values(template, values)
 
     document_with_values = template.html_document
     print(document_with_values)
-    assert document_with_values.__str__() == "<b>abc</b><h1>123</h1>"
+    assert new_html.__str__() == "<b>abc</b><h1>123</h1>"

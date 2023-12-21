@@ -1,4 +1,4 @@
-from csv_to_html.src.csv.parser.csv_parser import CSVParser
+from csv_to_html.src.mycsv.parser.csv_parser import CSVParser
 
 
 def test_init():

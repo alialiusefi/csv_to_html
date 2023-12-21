@@ -1,8 +1,8 @@
 import argparse
 
-from csv_to_html.csv.parser.csv_parser import CSVParser
-from csv_to_html.html.interpolator.html_interpolator import HtmlInterpolator
-from csv_to_html.html.parser.html_parser import HtmlTemplateParser
+from csv_to_html.mycsv.parser.csv_parser import CSVParser
+from csv_to_html.myhtml.interpolator.html_interpolator import HtmlInterpolator
+from csv_to_html.myhtml.parser.html_parser import HtmlTemplateParser
 
 
 def main():
@@ -11,7 +11,7 @@ def main():
         description='Parses CSV to visualize into an HTML page',
         epilog='some epilog'
     )
-    parser.add_argument('convert', help='Action to convert the csv to html')
+    parser.add_argument('convert', help='Action to convert the mycsv to myhtml')
     # todo: add required flags
     parser.add_argument('--csv_file')
     parser.add_argument('--html_template_file')
