@@ -5,9 +5,7 @@ description = "csv_to_html CLI"
 authors = [
     { name = "Ali Al-Iusefi", email = "alighanem99@live.com" },
 ]
-dependencies = [
-    "csv_to_html @ file:///${PROJECT_ROOT}/../csv_to_html",
-]
+dependencies = []
 requires-python = ">=3.11"
 license = {text = "MIT"}
 
@@ -16,3 +14,7 @@ csv_to_html_cli = "csv_to_html_cli.__main__:main"
 
 [tool.black]
 line-length = 80
+[tool.pdm.dev-dependencies]
+dev = [
+    "-e file:///${PROJECT_ROOT}/../csv_to_html#egg=csv-to-html",
+]

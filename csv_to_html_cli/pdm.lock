@@ -2,10 +2,10 @@
 # It is not intended for manual editing.
 
 [metadata]
-groups = ["default"]
+groups = ["default", "dev"]
 strategy = ["cross_platform"]
-lock_version = "4.4"
-content_hash = "sha256:0e395e14ae0ec88b2a9158b35da121c8970581c745ecc837ede833442d059b48"
+lock_version = "4.4.1"
+content_hash = "sha256:cce8e175499b3a991ca9373b7b9dde8d75ef6f5436a810d9956a5be0259283ae"
 
 [[package]]
 name = "aiohttp"
@@ -123,6 +123,21 @@ files = [
     {file = "black-23.12.0-cp312-cp312-win_amd64.whl", hash = "sha256:193946e634e80bfb3aec41830f5d7431f8dd5b20d11d89be14b84a97c6b8bc75"},
     {file = "black-23.12.0-py3-none-any.whl", hash = "sha256:a7c07db8200b5315dc07e331dda4d889a56f6bf4db6a9c2a526fa3166a81614f"},
     {file = "black-23.12.0.tar.gz", hash = "sha256:330a327b422aca0634ecd115985c1c7fd7bdb5b5a2ef8aa9888a82e2ebe9437a"},
+]
+
+[[package]]
+name = "build"
+version = "1.0.3"
+requires_python = ">= 3.7"
+summary = "A simple, correct Python build frontend"
+dependencies = [
+    "colorama; os_name == \"nt\"",
+    "packaging>=19.0",
+    "pyproject-hooks",
+]
+files = [
+    {file = "build-1.0.3-py3-none-any.whl", hash = "sha256:589bf99a67df7c9cf07ec0ac0e5e2ea5d4b37ac63301c4986d1acb126aa83f8f"},
+    {file = "build-1.0.3.tar.gz", hash = "sha256:538aab1b64f9828977f84bc63ae570b060a8ed1be419e7870b8b4fc5e6ea553b"},
 ]
 
 [[package]]
@@ -269,11 +284,13 @@ files = [
 name = "csv-to-html"
 version = "0.1.0"
 requires_python = ">=3.11"
+editable = true
 path = "../csv_to_html"
 summary = ""
 dependencies = [
     "beautifulsoup4>=4.12.2",
     "black>=23.10.1",
+    "build>=1.0.3",
     "pylint>=3.0.2",
     "pytest>=7.4.3",
     "twine>=4.0.2",
@@ -610,6 +627,16 @@ dependencies = [
 files = [
     {file = "pylint-3.0.3-py3-none-any.whl", hash = "sha256:7a1585285aefc5165db81083c3e06363a27448f6b467b3b0f30dbd0ac1f73810"},
     {file = "pylint-3.0.3.tar.gz", hash = "sha256:58c2398b0301e049609a8429789ec6edf3aabe9b6c5fec916acd18639c16de8b"},
+]
+
+[[package]]
+name = "pyproject-hooks"
+version = "1.0.0"
+requires_python = ">=3.7"
+summary = "Wrappers to call pyproject.toml-based build backend hooks."
+files = [
+    {file = "pyproject_hooks-1.0.0-py3-none-any.whl", hash = "sha256:283c11acd6b928d2f6a7c73fa0d01cb2bdc5f07c57a2eeb6e83d5e56b97976f8"},
+    {file = "pyproject_hooks-1.0.0.tar.gz", hash = "sha256:f271b298b97f5955d53fb12b72c1fb1948c22c1a6b70b315c54cedaca0264ef5"},
 ]
 
 [[package]]
