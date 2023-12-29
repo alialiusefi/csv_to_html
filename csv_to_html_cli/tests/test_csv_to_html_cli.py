@@ -1,6 +1,5 @@
 import os
 
-
 cli_command = "csvtohtml-cli"
 
 
