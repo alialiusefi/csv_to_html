@@ -31,7 +31,7 @@ def main():
         for idx, csv_row in enumerate(csv_rows):
             csv_row_values = csv_row.row_values
             map_placeholder_value = {
-                csv_column_header_key.value: row_value
+                f"${csv_column_header_key.value}": row_value
                 for csv_column_header_key, row_value in csv_row_values.items()
             }
             html = html_interpolator.set_values(

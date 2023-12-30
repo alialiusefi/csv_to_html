@@ -20,6 +20,7 @@ class HtmlInterpolator:
     def __set_value(
         self, soup: BeautifulSoup, placeholder: str, value: str
     ) -> BeautifulSoup:
-        element = soup.find(string=re.compile(placeholder))
+        escaped_placeholder = placeholder.replace("$", "\\$")
+        element = soup.find(string=re.compile(escaped_placeholder))
         element.replace_with(value)
         return soup

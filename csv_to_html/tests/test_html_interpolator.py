@@ -9,10 +9,10 @@ def test_init():
 
 def test_set_values():
     interpolator = HtmlInterpolator()
-    placeholders = {"placeholder1", "placeholder2"}
+    placeholders = {"$placeholder1", "$placeholder2"}
     html = "<b>$placeholder2</b><h1>$placeholder1</h1>"
     template = HtmlTemplate(placeholders, html)
-    values = {"placeholder1": "123", "placeholder2": "abc"}
+    values = {"$placeholder1": "123", "$placeholder2": "abc"}
 
     new_html = interpolator.set_values(template, values)
 
