@@ -6,6 +6,14 @@ from typing import List, Dict
 class CSVHeaderColumn:
     value: str
 
+    def __hash__(self) -> int:
+        return hash(self.value)
+
+    def __eq__(self, other) -> bool:
+        if type(other) is not CSVHeaderColumn:
+            return False
+        return self.value == other.value
+
 
 @dataclass
 class CSVHeader:
