@@ -156,6 +156,7 @@ cython_debug/
 
 # PyCharm
 .idea/
+.run/
 
 # VSCode
 .vscode
