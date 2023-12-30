@@ -26,4 +26,4 @@ class CSVHeader:
 
 @dataclass
 class CSVRow:
-    list_of_row_values: List[Dict[CSVHeaderColumn, str]]
+    row_values: Dict[CSVHeaderColumn, str]
