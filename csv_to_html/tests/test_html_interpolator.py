@@ -1,5 +1,5 @@
-from csv_to_html.src.myhtml.interpolator.html_interpolator import HtmlInterpolator
-from csv_to_html.src.myhtml.model.html_template import HtmlTemplate
+from csv_to_html.myhtml.interpolator.html_interpolator import HtmlInterpolator
+from csv_to_html.myhtml.model.html_template import HtmlTemplate
 
 
 def test_init():
