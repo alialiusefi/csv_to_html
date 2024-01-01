@@ -18,3 +18,11 @@ line-length = 80
 dev = [
     "-e file:///${PROJECT_ROOT}/../csv_to_html#egg=csv-to-html",
 ]
+test = [
+    "pytest>=7.4.3",
+]
+lint = [
+    "black>=23.10.1",
+    "pylint>=3.0.2"
+]
+# https://docs.pytest.org/en/latest/explanation/goodpractices.html

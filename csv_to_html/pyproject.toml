@@ -6,15 +6,12 @@ authors = [
     { name = "Ali Al-Iusefi", email = "alighanem99@live.com" },
 ]
 dependencies = [
-    "black>=23.10.1",
-    "pytest>=7.4.3",
-    "pylint>=3.0.2",
     "beautifulsoup4>=4.12.2",
     "twine>=4.0.2",
     "build>=1.0.3",
 ]
 requires-python = ">=3.11"
-license = {text = "MIT"}
+license = { text = "MIT" }
 
 [build-system]
 requires = ["pdm-backend"]
@@ -22,3 +19,12 @@ build-backend = "pdm.backend"
 
 [tool.black]
 line-length = 80
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=7.4.3",
+]
+lint = [
+    "black>=23.10.1",
+    "pylint>=3.0.2"
+]
